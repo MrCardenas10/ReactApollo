@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.4.10",
+    "@craco/craco": "^6.2.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -20,12 +21,13 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "eslint-check": "eslint --print-config path/to/main.js | eslint-config-prettier-check",
-    "eslint": "eslint --ext .tsx,.ts src"
+    "eslint": "eslint --ext .tsx,.ts src",
+    "watch:css": "postcss src/assets/styles/index.scss -o src/assets/styles/tailwindcss.scss"
   },
   "eslintConfig": {
     "extends": [
@@ -57,7 +59,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "jest": "^27.1.0",
+    "node-sass": "^6.0.1",
     "postcss": "^7.0.36",
     "prettier": "^2.3.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.9"
